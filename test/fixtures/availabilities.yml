@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  sunday: false
+  monday: false
+  tuesday: false
+  wednesday: false
+  thursday: false
+  friday: false
+  saturday: false
+  time_start: 2019-12-02 14:11:10
+  end_time: 2019-12-02 14:11:10
+
+two:
+  user_id: 1
+  sunday: false
+  monday: false
+  tuesday: false
+  wednesday: false
+  thursday: false
+  friday: false
+  saturday: false
+  time_start: 2019-12-02 14:11:10
+  end_time: 2019-12-02 14:11:10
