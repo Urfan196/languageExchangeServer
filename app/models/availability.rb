@@ -1,4 +1,4 @@
 class Availability < ApplicationRecord
   belongs_to :user
-  #add validation for presence
+  validates :start_time, :end_time, presence: true
 end
