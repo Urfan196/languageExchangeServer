@@ -74,3 +74,4 @@ intermediate = Fluency.create(level: "Intermediate", user_id: rand(1..3), langua
 advanced = Fluency.create(level: "Advanced", user_id: rand(1..3), language_id: rand(0..20))
 expert = Fluency.create(level: "Expert", user_id: rand(1..3), language_id: rand(0..20))
 native = Fluency.create(level: "Native", user_id: rand(1..3), language_id: rand(0..20))
+

@@ -8,8 +8,9 @@ class User < ApplicationRecord
   has_many :teacher_appointment, foreign_key: :student_id, class_name: "Appointment"
   has_many :teachers, through: :teacher_appointment, source: :teacher
   has_many :availabilities
-  
-  
+  # validates :username, uniqueness: { case_sensitive: false }
+
+
   # PASSWORD_FORMAT = /\A
   # (?=.{8,})          # Must contain 8 or more characters
   # (?=.*\d)           # Must contain a digit
