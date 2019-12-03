@@ -11,7 +11,6 @@ class User < ApplicationRecord
   # validates :username, uniqueness: { case_sensitive: false }
 
 
-  
   # PASSWORD_FORMAT = /\A
   # (?=.{8,})          # Must contain 8 or more characters
   # (?=.*\d)           # Must contain a digit
