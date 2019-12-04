@@ -1,4 +1,5 @@
 class FluenciesController < ApplicationController
+  skip_before_action :authorized
   def index
     fluencies = Fluency.all 
     render json: fluencies

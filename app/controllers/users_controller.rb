@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authorized, only: [:create, :profile, :index]
+  skip_before_action :authorized, only: [:create, :profile, :index, :show]
 
   def profile
     render json: { user: UserSerializer.new(current_user) }, status: :accepted
