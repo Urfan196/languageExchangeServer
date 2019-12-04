@@ -1,4 +1,5 @@
 class AvailabilitiesController < ApplicationController
+  skip_before_action :authorized
   def index
     availabilities = Availability.all 
     render json: availabilities

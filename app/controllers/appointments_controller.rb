@@ -1,4 +1,6 @@
 class AppointmentsController < ApplicationController
+  skip_before_action :authorized
+  
   def index
     appointments = Appointment.all 
     render json: appointments
