@@ -11,7 +11,9 @@ class AvailabilitiesController < ApplicationController
   end
 
   def create
+    user_id = current_user.id
     availability = Availability.new(availability_params)
+    availability.user_id = user_id 
     if availability.save
       render json: availability
     else
@@ -40,6 +42,6 @@ class AvailabilitiesController < ApplicationController
   private
 
   def availability_params
-    params.require(:availability).permit(:user_id, :sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :start_time, :end_time)
+    params.require(:availability).permit(:sunday, :monday, :tuesday, :wednesday, :thursday, :friday, :saturday, :start_time, :end_time)
   end
 end

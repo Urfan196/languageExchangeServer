@@ -30,4 +30,6 @@ class User < ApplicationRecord
   # format: { with: PASSWORD_FORMAT }, 
   # confirmation: true, 
   # on: :update
+
+
 end
