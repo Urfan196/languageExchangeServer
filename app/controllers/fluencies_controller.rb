@@ -11,7 +11,9 @@ class FluenciesController < ApplicationController
   end
 
   def create
+    user_id = current_user.id
     fluency = Fluency.new(fluency_params)
+    fluency.user_id = user_id 
     if fluency.save
       render json: fluency
     else
@@ -40,6 +42,6 @@ class FluenciesController < ApplicationController
   private
 
   def fluency_params
-    params.require(:fluency).permit(:level, :user_id, :language_id)
+    params.require(:fluency).permit(:level, :language_id)
   end
 end
