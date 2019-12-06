@@ -2,7 +2,7 @@ class FluenciesController < ApplicationController
   skip_before_action :authorized
   def index
     fluencies = Fluency.all 
-    render json: fluencies
+    render json: fluencies 
   end
 
   def show
@@ -23,7 +23,7 @@ class FluenciesController < ApplicationController
 
   def update
     fluency = Fluency.find(params[:id])
-    if fluency.update
+    if fluency.update(fluency_params)
       render json: fluency
     else
       render json: {error: "Something went wrong"}

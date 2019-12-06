@@ -12,7 +12,9 @@ class AppointmentsController < ApplicationController
   end
 
   def create
+    student_id = current_user.id
     appointment = Appointment.new(appointment_params)
+    appointment.student_id = student_id
     if appointment.save
       render json: appointment
     else

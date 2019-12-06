@@ -23,7 +23,7 @@ class AvailabilitiesController < ApplicationController
 
   def update
     availability = Availability.find(params[:id])
-    if availability.update
+    if availability.update(availability_params)
       render json: availability
     else
       render json: {error: "Something went wrong"}
