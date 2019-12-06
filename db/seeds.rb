@@ -57,6 +57,12 @@ languages = ["Amharic",
     "Welsh"
 ]
 
+Appointment.destroy_all
+Fluency.destroy_all
+Availability.destroy_all
+Language.destroy_all
+User.destroy_all
+
 
 languages.each do |language|
     Language.create(name: language)
